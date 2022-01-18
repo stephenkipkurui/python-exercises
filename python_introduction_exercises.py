@@ -1,6 +1,3 @@
-from email import message
-
-
 print('Hello World')
 name = 'Stepen Kipkurui'
 greeting = 'Hello, ' + name
