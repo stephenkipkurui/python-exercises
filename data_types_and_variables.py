@@ -2,7 +2,7 @@
 
 # ---------------------------------------------------------(A)---------------------------------------------------------------
 
-# Identify the data type of the following values:
+# [Q]:Identify the data type of the following values:
 
 
 # 99.9   [ Float ]
@@ -24,21 +24,72 @@
 # {'a': []} [ dictionary ]
 
 # ---------------------------------------------------------(B)---------------------------------------------------------------
+#  [Q]: What data type would best represent:
 
-#  What data type would best represent:
+# A term or phrase typed into a search box?  [ String ]
+# If a user is logged in?  [ Booleans ]
+# A discount amount to apply to a user's shopping cart?  [ Float ]
+# Whether or not a coupon code is valid?  [  Integer + Booleans  ]
+# An email address typed into a registration form?  [  string ]
+# The price of a product?  [ Float ]
+# A Matrix?  [ List ]
+# The email addresses collected from a registration form?  [  list ]
+# Information about applicants to Codeup's data science program?  [  Dictionary  ]
 
-# A term or phrase typed into a search box?  [  ]
-# If a user is logged in?  []
-# A discount amount to apply to a user's shopping cart?  []
-# Whether or not a coupon code is valid?  []
-# An email address typed into a registration form?  []
-# The price of a product?  []
-# A Matrix?  []
-# The email addresses collected from a registration form?  []
-# Information about applicants to Codeup's data science program?  []
+# ---------------------------------------------------------(C)---------------------------------------------------------------
+# For each of the following code blocks, read the expression and predict what the result 
+# of evaluating it would be, then execute the expression in your Python REPL.
 
-# You have rented some movies for your kids: The little mermaid (for 3 days), 
-# Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know 
+
+'1' + 2  # [invalid SyntaxError]
+
+6 % 4 # 0
+
+type(6 % 4) # [ Int ]
+
+type(type(6 % 4))  # Type
+
+'3 + 4 is ' + 3 + 4  # TypeError
+
+0 < 0  # False
+
+'False' == False  # False
+
+True == 'True' # False
+
+5 >= -5 # True
+
+True or "42"  # True
+
+6 % 5   #1
+
+5 < 4 and 1 == 1  # False
+
+'codeup' == 'codeup' and 'codeup' == 'Codeup' #True
+
+4 >= 0 and 1 !== '1' # Syntax Error / Invalid syntax
+
+6 % 3 == 0 # True
+
+5 % 2 != 0  # True
+
+[1] + 2   # TypeError: can only concatenate list (not "int") to list
+
+[1] + [2]  # [1,2]
+
+[1] * 2 #[1,1]
+
+[1] * [2] # TypeError: can't multiply sequence by non-int of type 'list'
+
+[] + [] == []  # True
+
+{} + {}  #TypeError: unsupported operand type(s) for +: 'dict' and 'dict'
+
+
+# ---------------------------------------------------------(D)---------------------------------------------------------------
+
+# You have rented some movies for your kids: The little mermaid (for 3 days),  
+# # Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know 
 # yet if they're going to like it). If price for a movie per day is 3 dollars, how 
 # much will you have to pay?
 
@@ -55,4 +106,41 @@ days_hercules = 1
 total_movies_price = ((MOVIE_PRICE_PER_DAY * days_little_mermaid) + (MOVIE_PRICE_PER_DAY * days_brother_bear) + (MOVIE_PRICE_PER_DAY * days_hercules))
 
 print(total_movies_price)
+
+#[ TOTAL PRICE: 27 ] 
+
+# ---------------------------------------------------------(E)---------------------------------------------------------------
+# [Q]: Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they
+# pay you a different rate per hour. Google pays 400 dollars per hour, Amazon 380, and Facebook
+# 350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 
+# 6 hours for Google and 4 hours for Amazon.
+
+total_salary = 0
+
+weekly_google_hours = 6
+weekly_facebook_hours = 10
+weekly_amazon_hours = 4
+total_hours_worked = (weekly_facebook_hours + weekly_amazon_hours + weekly_google_hours)
+
+google_pay_rate = 400
+amazon_pay_rate = 380
+facebook_pay_rate = 350
+
+total_weekly_pay_google = (weekly_google_hours * google_pay_rate)
+
+total_weekly_pay_facebook = (weekly_facebook_hours * facebook_pay_rate)
+
+total_weekly_pay_amazon = (weekly_amazon_hours * amazon_pay_rate)
+
+total_salary = (total_weekly_pay_google + total_weekly_pay_amazon +  total_weekly_pay_facebook)
+
+print(f"The total salary earned is $:  {total_salary}.")
+
+# $7420
+
+
+# ---------------------------------------------------------(F)---------------------------------------------------------------
+# A student can be enrolled to a class only if the class is not full and the class schedule 
+# does not conflict with her current schedule.
+
 
