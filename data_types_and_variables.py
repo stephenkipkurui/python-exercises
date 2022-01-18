@@ -144,3 +144,20 @@ print(f"The total salary earned is $:  {total_salary}.")
 # does not conflict with her current schedule.
 
 
+
+# ---------------------------------------------------------(G)---------------------------------------------------------------
+# A product offer can be applied only if people buys more than 2 items, and the offer has not
+# expired. Premium members do not need to buy a specific amount of products.
+
+
+
+# ---------------------------------------------------------(H)---------------------------------------------------------------
+username = 'codeup'
+password = 'notastrongpassword'
+
+# Create a variable that holds a boolean value for each of the following conditions:
+
+# the password must be at least 5 characters
+# the username must be no more than 20 characters
+# the password must not be the same as the username
+# bonus neither the username or password can start or end with whitespace
