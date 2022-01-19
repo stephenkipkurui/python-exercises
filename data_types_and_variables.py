@@ -153,11 +153,11 @@ NON_CONFLICT_SCHEDULE = False
 
 if CLASS_NOT_FULL == True and NON_CONFLICT_SCHEDULE == True:
     
-    register_student():
+    register_student()
     
 elif CLASS_FULL and CONFLICT_SCHEDULE:
     
-    deny_registeration():
+    deny_registeration()
         
 elif CLASS_NOT_FULL and CONFLICT_SCHEDULE:
     
@@ -187,9 +187,35 @@ def deny_registration(student_id):
 # ---------------------------------------------------------(G)---------------------------------------------------------------
 # A product offer can be applied only if people buys more than 2 items, and the offer has not
 # expired. Premium members do not need to buy a specific amount of products.
+product_bought_count = 0
+
+OFFER_EXPIRED = True
+OFFER_CURRENT = True
+
+if product_bought_count > 2 and OFFER_CURRENT:
+    
+    offer_product_discount()
+        
+elif premium_member(): 
+    
+    offer_product_discount()
+
+elif product_bought_count <= 2:
+    
+    no_offers() 
+        
+else:
+    
+    print('To qualify for offers, you need to buy 2 or more items or upgrade to premium customer.')    
 
 
-
+def offer_product_discount():
+    
+    print('You qualify for product offer')
+    
+def no_offers():
+    
+    print('No special offers at this time')
 # ---------------------------------------------------------(H)---------------------------------------------------------------
 username = 'codeup'
 password = 'notastrongpassword'
@@ -197,6 +223,35 @@ password = 'notastrongpassword'
 # Create a variable that holds a boolean value for each of the following conditions:
 
 # the password must be at least 5 characters
+if len(password)  >= 5:
+    
+    password_length = True
+
 # the username must be no more than 20 characters
+if len(username) >= 20:
+    username = False
+else:
+    username = True
+
 # the password must not be the same as the username
+if password == username:
+    
+    unacceptable_password = True
+else:
+    
+    unacceptable_password = False
+
 # bonus neither the username or password can start or end with whitespace
+
+stripped_password = password.strip()
+stripped_username = username.strip
+
+
+
+if (stripped_password or stripped_username) == True:
+    
+    password_and_username = password
+    
+else:
+    
+    password_and_username != password 
