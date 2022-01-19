@@ -41,6 +41,9 @@
 # of evaluating it would be, then execute the expression in your Python REPL.
 
 
+from atexit import register
+
+
 '1' + 2  # [invalid SyntaxError]
 
 6 % 4 # 0
@@ -142,9 +145,45 @@ print(f"The total salary earned is $:  {total_salary}.")
 # ---------------------------------------------------------(F)---------------------------------------------------------------
 # A student can be enrolled to a class only if the class is not full and the class schedule 
 # does not conflict with her current schedule.
+CLASS_FULL = True
+CLASS_NOT_FULL = False
+
+CONFLICT_SCHEDULE = True
+NON_CONFLICT_SCHEDULE = False
+
+if CLASS_NOT_FULL == True and NON_CONFLICT_SCHEDULE == True:
+    
+    register_student():
+    
+elif CLASS_FULL and CONFLICT_SCHEDULE:
+    
+    deny_registeration():
+        
+elif CLASS_NOT_FULL and CONFLICT_SCHEDULE:
+    
+    print('Class is not full but there is a conflict in the schedule. Please check the schedule again.')
+    
+elif CLASS_FULL and NON_CONFLICT_SCHEDULE:
+    
+    print('Class is full, you cannont be added to this class.')
+
+else:
+    
+    print('You did not choose any class or schedule. You must choose both')
 
 
-
+def register_student(name, student_id, subject, grade):
+    name = input('Enter student name: ')
+    student_id = input('Enter student ID: ')
+    subject = input('Enter student Subject: ')
+    grade = input('Enter grade: ')
+    
+    return name, student_id, subject, grade
+    
+    
+def deny_registration(student_id):    
+    print('Student cannot register this class. Contact course register.')
+    return student_id
 # ---------------------------------------------------------(G)---------------------------------------------------------------
 # A product offer can be applied only if people buys more than 2 items, and the offer has not
 # expired. Premium members do not need to buy a specific amount of products.
