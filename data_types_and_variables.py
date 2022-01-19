@@ -29,11 +29,11 @@
 # A term or phrase typed into a search box?  [ String ]
 # If a user is logged in?  [ Booleans ]
 # A discount amount to apply to a user's shopping cart?  [ Float ]
-# Whether or not a coupon code is valid?  [  Integer + Booleans  ]
+# Whether or not a coupon code is valid?  [ Booleans  ]
 # An email address typed into a registration form?  [  string ]
 # The price of a product?  [ Float ]
 # A Matrix?  [ List ]
-# The email addresses collected from a registration form?  [  list ]
+# The email addresses collected from a registration form?  [  String ]
 # Information about applicants to Codeup's data science program?  [  Dictionary  ]
 
 # ---------------------------------------------------------(C)---------------------------------------------------------------
@@ -44,7 +44,7 @@
 from atexit import register
 
 
-'1' + 2  # [invalid SyntaxError]
+'1' + 2  # [invalid SyntaxError] TypeError
 
 6 % 4 # 0
 
@@ -245,8 +245,6 @@ else:
 
 stripped_password = password.strip()
 stripped_username = username.strip
-
-
 
 if (stripped_password or stripped_username) == True:
     
