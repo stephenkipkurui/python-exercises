@@ -46,7 +46,7 @@ from atexit import register
 
 '1' + 2  # [invalid SyntaxError] TypeError
 
-6 % 4 # 0
+6 % 4 # 0 (Int)
 
 type(6 % 4) # [ Int ]
 
@@ -100,11 +100,8 @@ True or "42"  # True
 MOVIE_PRICE_PER_DAY = 3
 
 days_little_mermaid =3
-
 days_brother_bear = 5
-
 days_hercules = 1
-
 
 total_movies_price = ((MOVIE_PRICE_PER_DAY * days_little_mermaid) + (MOVIE_PRICE_PER_DAY * days_brother_bear) + (MOVIE_PRICE_PER_DAY * days_hercules))
 
