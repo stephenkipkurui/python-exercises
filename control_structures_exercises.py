@@ -5,18 +5,78 @@
 
 # 1. ---------------------------------Conditional Basics-----------------------------------
 # a). prompt the user for a day of the week, print out whether the day is Monday or not
+day = input('Enter day of the week: \n\t')
 
+if day == 'Monday' or day == 'MONDAY':
+    
+    print(f'The day chosen is {day}') 
+    
+else:
+    print('The day chosen is not monday')
 
 # b). prompt the user for a day of the week, print out whether the day is a weekday or a weekend
+# week = ['Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday','Satuday','Sunday']
 
+day = input('\t\n Weekend or Weeekday? Enter a day of the week: \n\t')
+                    
+if day == 'Monday' or day == 'Tuesday' or day == 'Wednesday' or day == 'Thursday' or day == 'Friday':
+                
+    print(f'The day: [ {day} ] is a weekday. Go to class/ Work:')
+        
+elif day == 'Tuesday':
+                
+    print(f'The day: [ {day} ] is a weekday. Go to class/ Work:')
+        
+        
+elif  day == 'Wednesday':
+                
+    print(f'The day: [ {day} ] is a weekday. Go to class/ Work:')
+        
+elif day == 'Thursday':
+                
+    print(f'The day: [ {day} ] is a weekday. Go to class/ Work:')
+        
+elif day == 'Friday':
+        
+    print(f'The day: [ {day} ] is a weekday. Go to class/ Work:')
+
+                
+elif day == 'Saturday':
+                
+    print(f'{day} is a weeekend . You may sleep in.')
+        
+elif day == 'Sunday':
+        
+    print(f'{day} is a weeekend . You may sleep in.')
+                
+else:
+                
+    print('Data entered is neither weekday or weekend.')
 
 # c). create variables and make up values for
 #       -> the number of hours worked in one week
-#       -> the hourly rate
-#       -> how much the week's paycheck will be
-#   
-# write the python code that calculates the weekly paycheck. You get paid time and a half if you work more than 40 hours
+weekly_hours_worked = 0
 
+#       -> the hourly rate
+hourly_rate = 0.0
+
+#       -> how much the week's paycheck will be
+weekly_pay = weekly_hours_worked * hourly_rate
+
+# write the python code that calculates the weekly paycheck. You get paid time and a half if you work more than 40 hours
+print(''' [------- WEEKLY PAY CALCULATOR -------]
+      
+        This program calculates weekly employee pay.''')
+
+weekly_hours_worked = int(input('Enter number of hours worked this week: '))
+
+hourly_rate = float(input('Enter hourly rate: '))
+
+weekly_pay = (weekly_hours_worked * hourly_rate)
+
+print(f'You have worked {weekly_hours_worked} hours this week at the hourly rate of $: {hourly_rate}. Your total pay is: $ {weekly_pay}')
+
+print('[-------PROGRAM END -------]')
 
 # 2. ------------------------------------Loop Basics---------------------------------------
 # [A]. WHILE LOOPS
