@@ -71,15 +71,29 @@ print(''' [------- WEEKLY PAY CALCULATOR -------]
       
         This program calculates weekly employee pay.''')
 
-weekly_hours_worked = int(input('Enter number of hours worked this week: '))
+hourly_rate = float(input('Enter pay rate: '))
 
-hourly_rate = float(input('Enter hourly rate: '))
+weekly_hours_worked = int(input('Enter hours worked in a week: '))
 
-weekly_pay = (weekly_hours_worked * hourly_rate)
+if weekly_hours_worked > 40:
+    
+    overtime_hourly_rate = 1.5 * hourly_rate
+    
+    weekly_pay = overtime_hourly_rate * weekly_hours_worked
+    
+    print(f'Pay including overtime pay: {weekly_pay}')
+    
+else: 
 
-print(f'You have worked {weekly_hours_worked} hours this week at the hourly rate of $: {hourly_rate}. Your total pay is: $ {weekly_pay}')
+    # weekly_hours_worked = int(input('Enter number of hours worked this week: '))
 
-print('[-------PROGRAM END -------]')
+    # hourly_rate = float(input('Enter hourly rate: '))
+
+    weekly_pay = (weekly_hours_worked * hourly_rate)
+
+    print(f'You have worked {weekly_hours_worked} hours this week at the hourly rate of $: {hourly_rate}. Your total pay is: $ {weekly_pay}')
+
+    print('[-------PROGRAM END -------]')
 
 # 2. ------------------------------------Loop Basics---------------------------------------
 # [A]. WHILE LOOPS
@@ -247,39 +261,39 @@ num = input('Enter an odd number between 1 and 50: ')
 
 while num.isdigit():
     
-    for odd_num in range(int(num)):
-        
-        if (odd_num in range(1, 50)):
+    num = num
+    
+    while num in range(1, 50):
             
-            while (odd_num % 2 != 0):
+        if num % 2 != 0:
+       
+            print(f'Here is the odd number: {num}')
                 
-                print(f'Here is the odd number: {odd_num}')
+            num += 1
                 
-                odd_num += odd_num
-                
-                if odd_num == num:
+            if num == num:    
+                print(f'Yikes! Skipping number {num}')
                     
-                    print(f'Yikes! Skipping number {odd_num}')
-                    
-                    continue
+                continue
             else:
                 
                 print('Entered number must be odd and a digit')
-           
         else:
             print('Number must be between 1 and 50. Enter odd number between 1 and 50: \n')
             
             print('----------- Re-run the code and enter the corrent range of numbers-----------')
             
             break
-            
-            # num = input('Try again: Number must be between 1 and 50:')
-                    
+    else:
+        
+        print('The number entered is not in the range 1 : 50. Enter number within 1 & 50: ')
+        
+        num = input('Try again: Number must be between 1 and 50:')                
 else:
     
-    print('The input entered is not a number: Try again')  
+    print(f'{num} is not a number: Try again')  
     
-    num = input('Enter an odd number between 1 and 50: ')
+    num = input('Enter ONLY NUMBERS (odd number) between 1 and 50: ')
 
     
 # Number to skip is: 27
@@ -315,6 +329,22 @@ else:
 # to enter a positive number and write a loop that counts from 0 to that number. (Hints: first make sure that the 
 # value the user entered is a valid number, also note that the input function returns a string, so you'll need to 
 # convert this to a numeric type.)
+
+
+number = int(input('Enter number greater than 0: '))
+
+
+while number > 0:
+    
+    for c_count in range(0, number):
+    
+        print(c_count)
+        
+        c_count += 1
+        
+        if c_count == number:
+        
+            break
 
 
 # e). Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from
