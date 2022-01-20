@@ -5,6 +5,9 @@
 
 # 1. ---------------------------------Conditional Basics-----------------------------------
 # a). prompt the user for a day of the week, print out whether the day is Monday or not
+from numpy import square
+
+
 day = input('Enter day of the week: \n\t')
 
 if day == 'Monday' or day == 'MONDAY':
@@ -82,8 +85,16 @@ print('[-------PROGRAM END -------]')
 # [A]. WHILE LOOPS
 
 # -> Create an integer variable i with a value of 5.
+i = 5
+
 # -> Create a while loop that runs so long as i is less than or equal to 15
+while i <= 15:
+    
 # -> Each loop iteration, output the current value of i, then increment i by one.
+    print(i)
+    
+    i += 1
+
 # Your output should look like this:
 
 # 5
@@ -100,11 +111,37 @@ print('[-------PROGRAM END -------]')
 
 
 # -> Create a while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
+count = 0
+
+while count <= 100:
+    
+    print(count, '\n')
+    
+    count += 2
+
 
 # -> Alter your loop to count backwards by 5's from 100 to -10.
+count = 100
+
+while count >= -10:
+    
+    print(count, '\n')
+    
+    count -= 5
+
 
 # -> Create a while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+initial_num = 2
+final_num = 1000000
 
+while initial_num <= final_num:
+        
+    print(initial_num)
+    
+    initial_num = (initial_num * initial_num)
+    
+    
+    
 #  2
 #  4
 #  16
@@ -113,6 +150,19 @@ print('[-------PROGRAM END -------]')
 
 
 # -> Write a loop that uses print to create the output shown below.
+
+num = 100
+
+end_num = 5
+
+
+while end_num <= num:
+    
+    print(num)
+    
+    num -= 5
+
+
 
 # 100
 # 95
@@ -139,6 +189,14 @@ print('[-------PROGRAM END -------]')
 # [B]. FOR LOOPS
 # i). Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number.
 
+number = int(input('Enter a number'))
+
+for n in range(1, number):
+    
+    count = int(n)
+    
+    print(f'{number} X {n}  = {number * count}')
+
 # For example, if the user enters 7, your program should output:
 
 # 7 x 1 = 7
@@ -155,6 +213,18 @@ print('[-------PROGRAM END -------]')
 
 # ii). Create a for loop that uses print to create the output shown below.
 
+num = int(input('Enter size: '))
+
+for n in range(num):
+    
+    for c in range (n + 1):
+        
+        print(f'{n}', end='')
+    
+    print()
+    
+    
+    
 # 1
 # 22
 # 333
