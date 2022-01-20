@@ -242,39 +242,45 @@ for n in range(num):
 # if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue 
 # statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 # Your output should look like this:
-num = int(input('Enter an odd number between 1 and 50: '))
 
-for odd_num in range(num):
+num = input('Enter an odd number between 1 and 50: ')
+
+while num.isdigit():
     
-    if ((odd_num < 1) or (odd_num > 50)):
+    for odd_num in range(int(num)):
         
-        print('Number must be between 1 and 50. Enter odd number between 1 and 50: \n')
-        
-        print('----------- Re-run the code and enter the corrent range of numbers-----------')
-        
-        break
-        
-        # num = input('Try again: Number must be between 1 and 50:')
-        
-    else:
-        
-        # continue
-    
-        if (odd_num % 2 != 0) or odd_num.isdigit():
+        if (odd_num in range(1, 50)):
             
-            print('Entered number must be odd and a digit')
-            
-            num = int(input('Only odd numbers. No invalid characters: '))
-            
-            # break
-            
-            
-        
+            while (odd_num % 2 != 0):
+                
+                print(f'Here is the odd number: {odd_num}')
+                
+                odd_num += odd_num
+                
+                if odd_num == num:
+                    
+                    print(f'Yikes! Skipping number {odd_num}')
+                    
+                    continue
+            else:
+                
+                print('Entered number must be odd and a digit')
+           
         else:
+            print('Number must be between 1 and 50. Enter odd number between 1 and 50: \n')
             
-            print(f'Here is an odd number: {odd_num}')
-        
-      
+            print('----------- Re-run the code and enter the corrent range of numbers-----------')
+            
+            break
+            
+            # num = input('Try again: Number must be between 1 and 50:')
+                    
+else:
+    
+    print('The input entered is not a number: Try again')  
+    
+    num = input('Enter an odd number between 1 and 50: ')
+
     
 # Number to skip is: 27
 
