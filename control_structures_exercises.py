@@ -242,7 +242,40 @@ for n in range(num):
 # if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue 
 # statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 # Your output should look like this:
+num = int(input('Enter an odd number between 1 and 50: '))
 
+for odd_num in range(num):
+    
+    if ((odd_num < 1) or (odd_num > 50)):
+        
+        print('Number must be between 1 and 50. Enter odd number between 1 and 50: \n')
+        
+        print('----------- Re-run the code and enter the corrent range of numbers-----------')
+        
+        break
+        
+        # num = input('Try again: Number must be between 1 and 50:')
+        
+    else:
+        
+        # continue
+    
+        if (odd_num % 2 != 0) or odd_num.isdigit():
+            
+            print('Entered number must be odd and a digit')
+            
+            num = int(input('Only odd numbers. No invalid characters: '))
+            
+            # break
+            
+            
+        
+        else:
+            
+            print(f'Here is an odd number: {odd_num}')
+        
+      
+    
 # Number to skip is: 27
 
 # Here is an odd number: 1
