@@ -5,6 +5,7 @@
 # 1). Define a function named is_two. It should accept one input and return True if the passed input is either 
 # the number or the string 2, False otherwise.
 
+from black import re
 from zmq import constants
 
 
@@ -163,7 +164,27 @@ def remove_vowels(string_input):
        
            
 remove_vowels('fsdnsdnsdsd asdsdasas')
+
+
+#----------------------Different Approach Start--------------------------------
+def remove_vowels(str_data):
     
+    if type(str_data) != str:
+        
+        return False
+    data = ''
+    
+    for chars in str_data:
+        
+        if is_consonant(chars):
+            data += chars
+            
+    return data
+    
+remove_vowels('Banana')
+
+#----------------------Different Approach End----------------------------------
+
 
 # 10). Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
 
@@ -179,7 +200,7 @@ def normalize_name(string_input):
                       'c','d','f','g','h','j','k','l','m','n','p','q',
                       'r','s','t','v','w','x','y','z', 'a', 'e', 'i', 'o', 'u',
                       'B','C','D','F','G','G','H','K','L','M','N','P','Q',
-                      'R','S','T','V','W','X','Y','Z', 'A', 'E', 'I', 'O', 'U', '#', '.','`','"','""', '')
+                      'R','S','T','V','W','X','Y','Z', 'A', 'E', 'I', 'O', 'U')
     
     for items in string_input:
         
@@ -197,7 +218,27 @@ def normalize_name(string_input):
     
     
 normalize_name('SssdsferD sdsda')
-# 
+#----------------------Different Approach Start--------------------------------
+
+def normalize_name_(str_in):
+    
+    data_in = ''
+    
+    str_in = str_in.lower()
+    for chars in str_in:
+        
+        if chars.isidentifier() or chars == ' ':
+            
+            data_in += chars
+        data_in = data_in.strip()
+        data_in = data_in.replace(' ', '_')
+        return data_in
+            
+normalize_name_('First Name')
+
+#----------------------Different Approach End----------------------------------
+
+
 #   for example:
 #       -> Name will become name
 #       -> First Name will become first_name
@@ -216,7 +257,6 @@ def cummulative_sum(num_list):
     
     return list(itertools.accumulate(num_list))
 
-        
 cummulative_sum(num_list)
     
     
