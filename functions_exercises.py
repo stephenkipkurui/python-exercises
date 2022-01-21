@@ -19,48 +19,33 @@ def is_two(data_in):
 # Call to the function
 is_two(4) 
 
-# 2). Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise. ********************
-vowels = ['a', 'e', 'i', 'o', 'u']    
+# 2). Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise.
+# vowels = ['a', 'e', 'i', 'o', 'u']    
 
 def is_vowel(vowels):
-    "Function to evaluate if input is a vowel or not"
-    for v in vowels:
-        # compares iterations with each individual vowels
-        if v == 'a' or v == 'e' or v == 'i' or v == 'o' or v == 'u':
-            
-            return True
-        else:
-            return False 
-# call to the function
-is_vowel('a')
-
-# 3). Define a function named is_consonant. It should return True if the passed string is a consonant, 
-# False otherwise. Use your is_vowel function to accomplish this. ************* not utilizing is_vowel()******************
-def is_consonant(str_input):
-    " Function to compare where the listed items are consonant"
-    if str_input not in is_vowel(vowels):
-        return True
     
+    if type(vowels) == str:
+        
+        str_vowel = vowels.lower() in ['a', 'e', 'i', 'o', 'u']  
+        
+        return str_vowel
     else:
+        
         return False
     
-is_consonant('')
+is_vowel('G')
+
+# 3). Define a function named is_consonant. It should return True if the passed string is a consonant, 
+# False otherwise. Use your is_vowel function to accomplish this. 
+def is_consonant(str_input):
+    " Function to compare where the listed items are consonant"
+    if type(str_input) == str:
+        alphabet_letters = str_input.isalpha()
+        return alphabet_letters  and not is_vowel(str_input)
+    return False
     
-
-
-# consonants = ['b', 'c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
-
-# def is_consonant(consonants):
+is_consonant('A')
     
-#     for cns in consonants:
-        
-#         if cns not in consonants:
-            
-#             return True
-#         else:
-#             return False 
-        
-# is_vowel('a')
         
     
 # 4). Define a function that accepts a string that is a word. The function should capitalize the first 
@@ -81,6 +66,24 @@ def captalize_consonants(words):
   
 captalize_consonants('Hello there')
 
+#----------------------Corrections Start----------------------------------
+
+def capitalize_consonants(input_string):
+    if type(input_string) != str:
+        
+        return False
+    
+    first_char = input_string[0]
+    
+    if is_consonant(first_char):
+        input_string = input_string.capitalize()
+        
+    return input_string
+
+
+capitalize_consonants('Hello World')
+
+#----------------------Corrections End----------------------------------
 
 # 5). Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) 
 # and the bill total, and return the amount to tip.
