@@ -5,35 +5,39 @@
 # 1). Define a function named is_two. It should accept one input and return True if the passed input is either 
 # the number or the string 2, False otherwise.
 
+from zmq import constants
+
+
 def is_two(data_in):
-    
+    "This function compares the data types to string and integer and return True or false"
     if type(data_in) == int or type(data_in) == str:
     
         return True
+    #Else statement is above is incorrect
     else:
         return False
-    
+# Call to the function
 is_two(4) 
 
 # 2). Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise. ********************
 vowels = ['a', 'e', 'i', 'o', 'u']    
 
 def is_vowel(vowels):
-    
+    "Function to evaluate if input is a vowel or not"
     for v in vowels:
-        
+        # compares iterations with each individual vowels
         if v == 'a' or v == 'e' or v == 'i' or v == 'o' or v == 'u':
             
             return True
         else:
             return False 
-        
+# call to the function
 is_vowel('a')
 
 # 3). Define a function named is_consonant. It should return True if the passed string is a consonant, 
 # False otherwise. Use your is_vowel function to accomplish this. ************* not utilizing is_vowel()******************
 def is_consonant(str_input):
-    
+    " Function to compare where the listed items are consonant"
     if str_input not in is_vowel(vowels):
         return True
     
@@ -60,15 +64,15 @@ is_consonant('')
         
     
 # 4). Define a function that accepts a string that is a word. The function should capitalize the first 
-# letter of the word if the word starts with a consonant.
+# letter of the word if the word starts with a consonant.******************
 
 def captalize_consonants(words):
-        
-    word = (words)
     
-    word_split = word.split()
+    constants =  is_consonant()
+   
+    word_split = words.split()
     
-    if word_split[0] in is_consonant(consonants):
+    if word_split[0] in constants:
         
         return True
     
