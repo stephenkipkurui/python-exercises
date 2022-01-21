@@ -4,12 +4,6 @@
 
 # 1). Define a function named is_two. It should accept one input and return True if the passed input is either 
 # the number or the string 2, False otherwise.
-# from operator import itemgetter, le
-# from black import re
-
-
-from tkinter import E
-
 
 def is_two(data_in):
     
@@ -19,8 +13,7 @@ def is_two(data_in):
     else:
         return False
     
-is_two(4)
-
+is_two(4) 
 
 # 2). Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise. ********************
 vowels = ['a', 'e', 'i', 'o', 'u']    
@@ -226,6 +219,9 @@ cummulative_sum(num_list)
 
 # Once you've completed the above exercises, follow the directions from https://gist.github.com/zgulde/ec8ed80ad8216905cda83d5645c60886 in order to thouroughly comment your code to explain your code.
 # Bonus
+
+
+
 
 # Create a function named twelveto24. It should accept a string in the format 10:45am or 4:30pm and return a string that is the representation of the time in a 24-hour format. Bonus write a function that does the opposite.
 # Create a function named col_index. It should accept a spreadsheet column name, and return the index number of the column.
