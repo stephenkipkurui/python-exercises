@@ -5,6 +5,7 @@
 
 # 1. ---------------------------------Conditional Basics-----------------------------------
 # a). prompt the user for a day of the week, print out whether the day is Monday or not
+from turtle import position
 from numpy import square
 
 
@@ -227,16 +228,13 @@ for n in range(1, number):
 
 # ii). Create a for loop that uses print to create the output shown below.
 
+
+
 num = int(input('Enter size: '))
 
-for n in range(num):
+for n in range (1, num):
     
-    for c in range (n + 1):
-        
-        print(f'{n}', end='')
-    
-    print()
-    
+    print(int(str(n) * n))    
     
     
 # 1
@@ -248,6 +246,20 @@ for n in range(num):
 # 7777777
 # 88888888
 # 999999999
+
+# [ ------ Not Correct result---------]
+num = int(input('Enter size: '))
+
+for n in range(num):
+    
+    for c in range (n + 1):
+        
+        print(f'{n}', end ='')
+    
+    print()
+    
+# [ ------ Not Correct result---------]
+
 
 
 # [C]. BREAK AND CONTINUE
@@ -265,7 +277,7 @@ while num.isdigit():
     
     while num in range(1, 50):
             
-        if num % 2 != 0:
+        if num % 2 == 1:
        
             print(f'Here is the odd number: {num}')
                 
@@ -294,6 +306,28 @@ else:
     print(f'{num} is not a number: Try again')  
     
     num = input('Enter ONLY NUMBERS (odd number) between 1 and 50: ')
+
+
+#--------------------------------Correct Answer Start------------------------------
+
+while True:
+    
+    pos_num = input('Enter odd number between 1 : 50: ')
+    
+    if pos_num.isdigit():
+        
+        if int(pos_num) % 2 == 1 and int(pos_num) <= 50:
+            break
+pos_num = int(pos_num)
+
+for num in range(1, 50, 2):
+    if num == pos_num:
+        print('Yikes! skipping number: ', num)
+    else:
+        
+        print('Here is an odd number: ', num)
+    
+#--------------------------------Correct Answer End--------------------------------
 
     
 # Number to skip is: 27
@@ -349,6 +383,21 @@ while number > 0:
 
 # e). Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from
 # the number the user entered down to 1.
+number = int(input('Enter number greater than 0: '))
+
+
+while number > 0:
+    
+    for c_count in range(0, number):
+    
+        print(c_count)
+        
+        c_count -= 1
+        
+        if c_count == number:
+        
+            break
+
 
 # 3. ---------------------------------------Fizzbuzz----------------------------------------------
 # One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, 
@@ -365,6 +414,24 @@ while number > 0:
 # -> Ask if the user wants to continue.
 # -> Assume that the user will enter valid data.
 # -> Only continue if the user agrees to.
+# ----------------------Instructor Code: Exercise Review Start------------------------
+while True:
+    posited_num = input('Please insert a positive integer: ')
+    if posited_num.isdigit():
+        if int(posited_num) > 0:
+            break
+proceed = input('Do you want to continue and print a table of powers? :')
+if proceed.lower().startswith('y'):
+    posited_num = int(posited_num)
+    print()
+    print('number | squared | cubed')
+    print('------ | ------- | -----')
+    for i in range(1, posited_num + 1):
+        i_squared = i ** 2
+        i_cubed = i ** 3
+        print(f'{i: <6} | {i_squared: ^7} | {i_cubed: 5}')
+        
+# ----------------------Instructor Code: Exercise Review End--------------------------
 
 
 # Example Output
@@ -385,6 +452,31 @@ while number > 0:
 
 # 5. --------------------------Convert given number grades into letter grades-----------------------
 # -> Prompt the user for a numerical grade from 0 to 100.
+
+score = int(input('What is your score: '))
+
+if score <= 59:
+    
+    print('You scored an F:')
+elif score >= 60 and score <=66:
+    
+    print('Score D')
+elif score >= 67 and score <= 79:
+    
+    print('Scored C')
+    
+elif score >= 80  and score <= 88:
+    print('Scored B')
+    
+elif score  >= 88 and score <= 100:
+    
+    print('Scored A')
+    
+else: 
+    print('Invalid entry')
+    
+    score = int(input('What is your score: '))
+
 # -> Display the corresponding letter grade.
 # -> Prompt the user to continue.
 # -> Assume that the user will enter valid integers for the grades.
@@ -397,14 +489,54 @@ while number > 0:
 #       F : 59 - 0
 
 
-# ----------------------------------------------Bonus----------------------------------------------
+# ----------------------------------------------BONUS----------------------------------------------
 # Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
+
 
 
 
 # 6. -----Create a list of dictionaries where each dictionary represents a book that you have read. 
 # Each dictionary in the list should have the keys title, author, and genre. Loop through the list and 
 # print out information about each book.-------------------------------------------------------------
+
+# ----------------------Instructor Code: Exercise Review Start--------------------------
+bookshelf = [
+    {'title': 'Annihilation',
+     'author': 'Jeff Vandermeer',
+     'genre': 'Science Fiction'},
+    {'title': 'Octopus Pie',
+     'author': 'Maredeth Gran',
+     'genre': 'Comic'},
+    {'title': 'Cabin At the End of the World',
+     'author': 'Paul Tremblay',
+     'genre': 'Horror'},
+    {'title': 'Severance',
+     'author': 'Ling Ma',
+     'genre': 'Science Fiction'},
+]
+    
+for book in bookshelf:
+    print('we are living in a single dictionary here')
+    [print(key, ': ', book[key]) for key in book]
+    print('------')
+    
+picked_genre = input('Please pick a genre and I will return the titles of that genre on shelf. \n')
+   
+matches = []
+for book in bookshelf:
+    if book['genre'].lower() == picked_genre.lower():
+        matches.append(book['title'])
+if matches == []:
+    print('no books in that genre available. please check back later')
+else:
+    print(f'I have the following titles in the genre {picked_genre}')
+    [print(match) for match in matches]
+
+
+# ----------------------Instructor Code: Exercise Review End----------------------------
+
+
+
 
 
 # a). Prompt the user to enter a genre, then loop through your books list and print out the titles of all the books in that genre.
