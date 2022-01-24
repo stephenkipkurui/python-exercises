@@ -3589,7 +3589,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a1e70a70",
+   "id": "41485740",
    "metadata": {},
    "source": [
     "Total number of users\n"
@@ -3598,7 +3598,7 @@
   {
    "cell_type": "code",
    "execution_count": 65,
-   "id": "ef56792f",
+   "id": "67a587c5",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -4110,7 +4110,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "bfb6a53d",
+   "id": "faa5e344",
    "metadata": {},
    "source": [
     "Number of active users\n",
@@ -4120,7 +4120,7 @@
   {
    "cell_type": "code",
    "execution_count": 136,
-   "id": "6b83b33c",
+   "id": "17067fe2",
    "metadata": {},
    "outputs": [
     {
@@ -4164,7 +4164,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "626824fb",
+   "id": "eded9926",
    "metadata": {},
    "source": [
     "Number of inactive users\n",
@@ -4174,7 +4174,7 @@
   {
    "cell_type": "code",
    "execution_count": 139,
-   "id": "0bd4b044",
+   "id": "1c64c9bf",
    "metadata": {},
    "outputs": [
     {
@@ -4208,7 +4208,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "af96d300",
+   "id": "a408caf5",
    "metadata": {},
    "source": [
     "Grand total of balances for all users\n",
@@ -4218,7 +4218,7 @@
   {
    "cell_type": "code",
    "execution_count": 97,
-   "id": "31f4dde9",
+   "id": "af44c472",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -4228,7 +4228,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "29e9560e",
+   "id": "185d56de",
    "metadata": {},
    "source": [
     "Average balance per user\n",
@@ -4238,14 +4238,14 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "b7013d07",
+   "id": "3bfd450d",
    "metadata": {},
    "outputs": [],
    "source": []
   },
   {
    "cell_type": "markdown",
-   "id": "15469aea",
+   "id": "dfce534c",
    "metadata": {},
    "source": [
     "User with the lowest balance\n",
@@ -4255,14 +4255,14 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "ba88ad50",
+   "id": "7302a4ea",
    "metadata": {},
    "outputs": [],
    "source": []
   },
   {
    "cell_type": "markdown",
-   "id": "13935288",
+   "id": "7e5c30be",
    "metadata": {},
    "source": [
     "User with the highest balance\n",
@@ -4272,14 +4272,14 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "6b820d83",
+   "id": "6df6d59c",
    "metadata": {},
    "outputs": [],
    "source": []
   },
   {
    "cell_type": "markdown",
-   "id": "29778e65",
+   "id": "1d4d9f4b",
    "metadata": {},
    "source": [
     "Most common favorite fruit\n",
@@ -4289,14 +4289,14 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "c1999c90",
+   "id": "5707133f",
    "metadata": {},
    "outputs": [],
    "source": []
   },
   {
    "cell_type": "markdown",
-   "id": "5cdd115f",
+   "id": "e661d923",
    "metadata": {},
    "source": [
     "Least most common favorite fruit\n",
@@ -4306,14 +4306,14 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "affbf995",
+   "id": "2bc62352",
    "metadata": {},
    "outputs": [],
    "source": []
   },
   {
    "cell_type": "markdown",
-   "id": "94563970",
+   "id": "f113abaf",
    "metadata": {},
    "source": [
     "Total number of unread messages for all users"
@@ -4322,7 +4322,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "ef367118",
+   "id": "6c01a127",
    "metadata": {},
    "outputs": [],
    "source": []
