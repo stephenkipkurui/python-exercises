@@ -408,6 +408,20 @@ while number > 0:
 # -> For the multiples of five print "Buzz".
 # -> For numbers which are multiples of both three and five print "FizzBuzz".
 
+for item in range(1, 100 + 1):
+    if (item % 3 == 0) and (item % 5 == 0):
+        
+        print('Fizzbuzz')
+        
+    elif item % 3 == 0:
+        print('Fizz')
+        
+    elif item % 5 == 0:
+        print('buzz')
+        
+    else:
+        print(item)
+
 # 4. ----------------------------------Display a table of powers----------------------------------
 # -> Prompt the user to enter an integer.
 # -> Display a table of squares and cubes from 1 to the value entered.
